@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Dancing+Script&family=Festive&family=Indie+Flower&family=Lato:wght@300&family=Moo+Lah+Lah&family=PT+Sans+Narrow&family=Permanent+Marker&family=Poppins:wght@300&family=Roboto:wght@100&family=Rock+Salt&family=VT323&family=Send+Flowers&family=Satisfy&display=swap");
+
+* {
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 160px;
+  background-color: #696969;
+  color: #d5ad6d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header h1 {
+  font-family: "Send Flowers";
+}
+
+header button {
+  border: none;
+  background-color: #696969;
+  color: whitesmoke;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 0 15px;
+  padding: 10px 0px;
+
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+}
+
+header button:hover {
+  cursor: pointer;
+  top: -7px;
+}
+
+.navSelector {
+  border-bottom: whitesmoke solid 3px;
+}
+
+.home-main-container {
+  display: flex;
+}
+
+.home-image img,
+.home-content {
+  height: 600px;
+}
+
+div.home-content {
+  background-color: #d5ad6d;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.home-content p {
+  color: white;
+  white-space: pre-line;
+  font-family: "Satisfy";
+  font-size: 20px;
+  padding: 20px 20px;
+  height: 300px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  background-color: #696969;
+  color: #d5ad6d;
+  font-weight: bold;
+  height: 50px;
+  margin: -10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
