@@ -1,9 +1,12 @@
 "use strict";
 
 import loadhomepage from "./homepage.js";
+import loadMenu from "./menu.js";
+import loadContact from "./contact.js";
 
 function createHeader() {
   const header = document.createElement("header");
+  header.classList.add("header");
   const restName = document.createElement("h1");
   const btnsDiv = document.createElement("div");
   btnsDiv.classList.add("headerBtnsDiv");
@@ -15,15 +18,18 @@ function createHeader() {
   const homeButton = document.createElement("button");
   homeButton.textContent = "Home";
   homeButton.classList.add("homeBtn");
-  homeButton.classList.add("navSelector");
+  homeButton.classList.add("headerbtn");
+  homeButton.classList.add("active");
 
   const menuButton = document.createElement("button");
   menuButton.textContent = "Menu";
   menuButton.classList.add("menuBtn");
+  menuButton.classList.add("headerbtn");
 
   const contactButton = document.createElement("button");
   contactButton.textContent = "Contact";
   contactButton.classList.add("contactBtn");
+  contactButton.classList.add("headerbtn");
 
   btnsDiv.appendChild(homeButton);
   btnsDiv.appendChild(menuButton);
@@ -53,6 +59,38 @@ function createFooter() {
   return footer;
 }
 
+function loadSelectedPage() {
+  let selectedPage;
+
+  const homeBtn = document.querySelector(".homeBtn");
+  const menuBtn = document.querySelector(".menuBtn");
+  const contactBtn = document.querySelector(".contactBtn");
+
+  const headerBtns = Array.from(document.querySelectorAll(".headerbtn"));
+  headerBtns.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      if (e.target.classList.contains("homeBtn")) {
+        selectedPage = loadhomepage();
+        homeBtn.classList.add("active");
+        menuBtn.classList.remove("active");
+        contactBtn.classList.remove("active");
+      } else if (e.target.classList.contains("menuBtn")) {
+        selectedPage = loadMenu();
+        menuBtn.classList.add("active");
+        homeBtn.classList.remove("active");
+        contactBtn.classList.remove("active");
+      } else if (e.target.classList.contains("contactBtn")) {
+        selectedPage = loadContact();
+        contactBtn.classList.add("active");
+        homeBtn.classList.remove("active");
+        menuBtn.classList.remove("active");
+      }
+    });
+
+    return selectedPage;
+  });
+}
+
 function initializeWebsite() {
   const content = document.getElementById("content");
 
@@ -61,6 +99,7 @@ function initializeWebsite() {
   content.appendChild(createFooter());
 
   loadhomepage();
+  loadSelectedPage();
 }
 
 export default initializeWebsite;

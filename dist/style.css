@@ -2,11 +2,28 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 .content {
+  min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+header,
+main,
+footer {
+  width: 100%;
 }
 
 header {
@@ -42,7 +59,7 @@ header button:hover {
   top: -7px;
 }
 
-.navSelector {
+.active {
   border-bottom: whitesmoke solid 3px;
 }
 
@@ -80,9 +97,58 @@ div.home-content p {
   color: #d5ad6d;
   font-weight: bold;
   height: 50px;
-  margin: -10px;
+  margin-top: -10px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Menu CSS */
+main {
+  background-image: url(./images/background.jpg);
+  background-size: 500px 500px;
+  /* padding: 20px 0px; */
+}
+
+.menuItem {
+  width: 300px;
+  height: 280px;
+  padding: 20px;
+  background-color: #696969;
+  color: #d5ad6d;
+  border: none;
+  margin: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.itemImage,
+.itemName {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.menuList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  /* width: 800px; */
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
