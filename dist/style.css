@@ -152,3 +152,33 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+/* Contact container */
+
+.contact-details {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-html {
+  height: 400px;
+  width: 550px;
+  padding: 10px;
+  border: 1px solid #d5ad6d;
+  color: white;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-details img {
+  width: 500px;
+  height: 300px;
+}

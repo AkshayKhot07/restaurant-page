@@ -1,11 +1,24 @@
 "use strict";
 
 function createContact() {
-  const somePara = document.createElement("p");
-  somePara.textContent =
-    "Contact Contact Contact Contact sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?";
+  const contactContainer = document.createElement("div");
+  contactContainer.classList.add(".contact-container");
 
-  return somePara;
+  const contactDetails = document.createElement("div");
+  contactDetails.classList.add("contact-details");
+
+  const contactHtml = `
+  <div class="contact-html">
+  <p class="contactPhoneNumber">${"📞"} 8888-9087-10</p>
+  <p class="contactAddress">${"🏡"} Bollywood Hadda 98, Mumbai, India</p>
+  <img src=${"images/map.PNG"} class="contactImage"> 
+  </div>
+  `;
+
+  contactDetails.innerHTML += contactHtml;
+  contactContainer.appendChild(contactDetails);
+
+  return contactContainer;
 }
 
 function loadContact() {
