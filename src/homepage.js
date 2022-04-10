@@ -5,13 +5,21 @@ function homepageContent() {
   homeMainContainer.classList.add("home-main-container");
   homeMainContainer.setAttribute("id", "home-main-container");
 
-  const homeImgDiv = document.createElement("div");
-  homeImgDiv.classList.add("home-image");
-  homeImgDiv.setAttribute("id", "home-image");
+  const homeImgDiv1 = document.createElement("div");
+  homeImgDiv1.classList.add("home-image");
+  homeImgDiv1.setAttribute("id", "home-image1");
 
-  const homeImgEl = document.createElement("img");
-  homeImgEl.src = `images/homecover.png`;
-  homeImgDiv.appendChild(homeImgEl);
+  const homeImgEl1 = document.createElement("img");
+  homeImgEl1.src = `images/homecover1.png`;
+  homeImgDiv1.appendChild(homeImgEl1);
+
+  const homeImgDiv2 = document.createElement("div");
+  homeImgDiv2.classList.add("home-image");
+  homeImgDiv2.setAttribute("id", "home-image2");
+
+  const homeImgEl2 = document.createElement("img");
+  homeImgEl2.src = `images/homecover2.png`;
+  homeImgDiv2.appendChild(homeImgEl2);
 
   const homeContentDiv = document.createElement("div");
   homeContentDiv.classList.add("home-content");
@@ -30,7 +38,8 @@ function homepageContent() {
     "A true haven for meat lovers 🤸‍♂️💝";
   homeContentDiv.appendChild(homeContentP);
 
-  homeMainContainer.appendChild(homeImgDiv);
+  homeMainContainer.appendChild(homeImgDiv1);
+  homeMainContainer.appendChild(homeImgDiv2);
   homeMainContainer.appendChild(homeContentDiv);
 
   return homeMainContainer;
